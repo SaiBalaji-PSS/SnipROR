@@ -30,9 +30,9 @@ class Api::Auth::AuthController < ApplicationController
 
   def delete_user
     if current_user.destroy
-      render json:{message: "Account deleted successfully"}, status: :ok
+      render json: { message: "Account deleted successfully" }, status: :ok
     else
-      render json:{message: "Unable to delete the account"}, status: :ok
+      render json: { message: "Unable to delete the account" }, status: :ok
     end
   end
 

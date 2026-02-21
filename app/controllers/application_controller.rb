@@ -9,15 +9,13 @@ class ApplicationController < ActionController::API
     puts decoded_token
     @current_user = User.find(decoded_token[:user_id])
     rescue ActiveRecord::RecordNotFound
-      render json: {message: "User not found"}, status: :ok
+      render json: { message: "User not found" }, status: :ok
     rescue  JWT::DecodeError
-      render json: {message: "Unable to decode the token"}, status: :ok
+      render json: { message: "Unable to decode the token" }, status: :ok
     rescue JWT::ExpiredSignature
-      render json: {message: "The token has expired"}, status: :ok
+      render json: { message: "The token has expired" }, status: :ok
     rescue => e
-      render json: {message: e.message}, status: :ok
+      render json: { message: e.message }, status: :ok
     end
   end
-
-
 end

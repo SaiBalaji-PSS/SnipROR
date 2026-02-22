@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_21_045030) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_22_131444) do
+  create_table "urls", force: :cascade do |t|
+    t.integer "click_count", default: 0
+    t.datetime "created_at", null: false
+    t.string "short_code"
+    t.datetime "updated_at", null: false
+    t.string "url"
+    t.string "user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email"

@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   self.primary_key = "user_id"
+  has_many :urls, foreign_key: :user_id, primary_key: :user_id, dependent: :destroy
   before_create :assign_primary_key
   has_secure_password
 

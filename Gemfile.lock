@@ -356,6 +356,7 @@ DEPENDENCIES
   jwt
   kamal
   nanoid
+  nokogiri
   puma (>= 5.0)
   rails (~> 8.1.2)
   rubocop-rails-omakase

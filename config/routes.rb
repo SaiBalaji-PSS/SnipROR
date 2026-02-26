@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post "/signup", to: "auth#signup"
       get "/me", to: "auth#me"
       delete "/deleteuser", to: "auth#delete_user"
+      post "/refresh", to: "auth#refresh_access_token"
     end
   end
   namespace :api do

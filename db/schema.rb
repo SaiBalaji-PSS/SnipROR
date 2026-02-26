@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_22_131444) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_24_141247) do
   create_table "urls", force: :cascade do |t|
     t.integer "click_count", default: 0
     t.datetime "created_at", null: false
     t.string "short_code"
+    t.string "thumnailimage"
     t.datetime "updated_at", null: false
     t.string "url"
     t.string "user_id"
